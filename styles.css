@@ -120,6 +120,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 150px;
+    flex-shrink: 2;
   }
 
   .galery div img {
@@ -130,6 +131,19 @@ h3 {
 }
 
 @media screen and (max-width: 425px) {
+  main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h3 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .title {
+    flex-direction: column;
+  }
   galery {
     display: flex;
     flex-direction: column;
