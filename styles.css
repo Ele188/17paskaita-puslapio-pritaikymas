@@ -36,8 +36,8 @@ a {
   color: black;
 }
 main {
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 .title {
   display: flex;
@@ -72,42 +72,79 @@ h3 {
 .galery {
   margin-top: 150px;
   display: flex;
-  justify-items: center;
-  gap: 100px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 15px;
 }
 
 .galery div img {
   height: 250px;
-  width: 400px;
+  width: 350px;
   object-fit: cover;
 }
-
-@media screen and (max-width: 1696px) {
-  .galery {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 200px;
-  }
-
+@media screen and (max-width: 1260px) {
   .galery div img {
-    height: 300px;
-    width: 500px;
+    height: 200px;
+    width: 300px;
     object-fit: cover;
   }
 }
 
-@media screen and (max-width: 922px) {
-  header img {
-    margin: auto;
+@media screen and (max-width: 1130px) {
+  .galery div img {
+    height: 180px;
+    width: 280px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .galery div img {
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .galery div img {
+    height: 120px;
+    width: 220px;
+    object-fit: cover;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+  }
+
+  .galery div img {
+    height: 150px;
+    width: 200px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  galery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   header img {
     margin: auto;
     align-self: center;
   }
   nav ul {
     display: none;
+  }
+
+  .main-img img {
+    width: 100%;
   }
 }
